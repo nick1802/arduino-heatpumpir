@@ -4,7 +4,7 @@
  *
  *
  */
-#include <DaikinHeatpumpIR.h>
+#include <DaikinHeatpumpARC_TBC_IR.h>
 #include <HeatpumpIR.h>
 #include <IRSender.h>
 
