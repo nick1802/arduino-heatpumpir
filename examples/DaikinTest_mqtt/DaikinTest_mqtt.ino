@@ -12,7 +12,7 @@
 #include <PubSubClient.h>
 
 IRSenderESP8266 irSender(14);     // IR led on Duemilanove digital pin 3, using Arduino PWM
-DaikinHeatpumpIR *heatpumpIR;
+DaikinHeatpumpARC_TBC_IR *heatpumpIR;
 
 const char* ssid = "SSID";// your wifi name
 const char* password = "PASS";  // your wifi password
@@ -56,7 +56,7 @@ void setup() {
   Serial.print("RSSI : ");
   Serial.println(WiFi.RSSI());      // wifi signal strength
   Serial.println();
-  heatpumpIR = new DaikinHeatpumpIR();
+  heatpumpIR = new DaikinHeatpumpARC_TBC_IR();
   client.setServer(mqtt_server, 1883);      
   client.setCallback(callback);
 
